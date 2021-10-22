@@ -1,17 +1,26 @@
-Problem Statement
+Problem Statement :- 
+
 People with visual impairment have a difficult time going about places on their own. They always feel a
 need to be accompanied by a helper to reach their destination safely. Ascertain a solution to ease their
 lives by designing a system to be embedded into a walking stick such that it continuously scans the
 environment and provides feedback to the person. Try and replace a human helper with a designed
-system that is as reliable as an actual helper. Objective
+system that is as reliable as an actual helper.
+
+Objective :
+
 We are going to make a Smart Walking Stick for the people with visual disability . This stick is far better
 than the traditional sticks that they use everyday . We selected Stick for developing a product because
-Stick is considered as the Third Eye for Blind People . Novelty
+Stick is considered as the Third Eye for Blind People .
+
+Novelty :
+
 The general Blind Sticks that are available in the market are capable of finding obstacles only when they
 touch the objects physically that may sometime result in accident . But the Smart Stick that we
-developed consists of the following advance features :- 1. It is capable of finding obstacles that may be present in Front , Right and Left direction of the Blind
-Man without any physical touch with the object . Our product can detect object from the distance
-of 1 meter and alerts the Blind Man by Vibrating the Stick and Buzzer Sound . 2. Our Smart Stick is also capable of detecting water present in front of Blind People to avoid any
+developed consists of the following advance features :-
+1. It is capable of finding obstacles that may be present in Front , Right and Left direction of the Blind
+   Man without any physical touch with the object . Our product can detect object from the distance
+   of 1 meter and alerts the Blind Man by Vibrating the Stick and Buzzer Sound . 
+2. Our Smart Stick is also capable of detecting water present in front of Blind People to avoid any
 type of accident caused due to slippery surface. 3. We have also included IR Remote that will help the man to find the stick if he losses it .Whenever
 he press the button in IR Remote a beep sound starts that helps the man to get his stick back . 4. Though the wavelength of Red Light is highest , so we have connected a Red Light on the stick so
 that the person coming from the front side can see it from distance and become cautious that a
