@@ -1,6 +1,6 @@
 #include <IRremote.h>
 
-IRrecv IR(13);
+IRrecv IR(12);
 decode_results myresult;
 
 #define echopin1 2
