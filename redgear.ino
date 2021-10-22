@@ -1,8 +1,11 @@
-//#include <IRremote.h>
+#include <IRremote.h>
 
-//IRrecv IR(13);
-//decode_results myresult;
+IRrecv IR(13);
+decode_results myresult;
 
+#define echopin1 2
+#define echopin2 3
+#define echopin3 4
 #define echopin1 2
 #define echopin2 3
 #define echopin3 4
@@ -11,34 +14,33 @@
 #define triggpin3 7
 #define buzzer 8
 #define motor 9
-#define ldr A0
 #define led1 10
-#define led2 11
-#define led3 12
+#define ldr A0
+#define led2 A2
+#define led3 A1
 
 long duration1 , distance1 , duration2 , distance2 , duration3 , distance3 ;
-int ldr_data;
-const int threshold = 90;
+unsigned int ldr_data;
+const int ldr_value = 400;
 void setup()
 {
- 
+  IR.enableIRIn();
+  //Serial.begin(9600);
   pinMode(echopin1 , INPUT);
   pinMode(echopin2 , INPUT);
   pinMode(echopin3 , INPUT);
-  
-  for(int i=5; i<=12; i++)
+  pinMode(led3 , OUTPUT);
+  pinMode(led2 , OUTPUT);
+  for(int i=5; i<=10; i++)
   {
   pinMode(i , OUTPUT);
   }
-  
-   //IR.enableIRIn();
-  //Serial.begin(9600);
 }
 
 void loop()
 {
    ldr_data = analogRead(ldr);
-  if(ldr_data <= threshold)
+  if(ldr_data <= ldr_value)
   {
     digitalWrite(led1 , HIGH);
     digitalWrite(led2 , HIGH);
@@ -53,8 +55,8 @@ void loop()
     delay(500);
   }
   
- digitalWrite(triggpin1 , LOW);
- delayMicroseconds(2);
+  digitalWrite(triggpin1 , LOW);
+  delayMicroseconds(2);
   digitalWrite(triggpin1 ,HIGH);
   delayMicroseconds(10);
   digitalWrite(triggpin1 , LOW);
@@ -71,13 +73,13 @@ void loop()
     delay(500);
   }
 
-digitalWrite(triggpin2 , LOW);
+  digitalWrite(triggpin2 , LOW);
   delayMicroseconds(2);
   digitalWrite(triggpin2 ,HIGH);
   delayMicroseconds(10);
   digitalWrite(triggpin2 , LOW);
   
-   duration2 = pulseIn(echopin2 , HIGH);
+  duration2 = pulseIn(echopin2 , HIGH);
   distance2 = duration2 * 0.034/2;
   
   if(distance2<100)
@@ -89,6 +91,24 @@ digitalWrite(triggpin2 , LOW);
     delay(100);
   }
   
- 
+ if(IR.decode(&myresult))
+  {
+   //Serial.println(myresult.value , HEX);
+ IR.resume();
+ }
+ // delay(100);
+  
+  if(myresult.value == 0xFD00FF)
+ {
+   digitalWrite(buzzer , HIGH);
+    delay(1500);
+    digitalWrite(buzzer , LOW);
+    delay(100);
+  }
+  else if(myresult.value == 0xFD807F)
+  {
+    digitalWrite(buzzer , LOW);
+    delay(500);
+  }
   
 }
