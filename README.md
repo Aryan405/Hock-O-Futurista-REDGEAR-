@@ -1,22 +1,22 @@
 Problem Statement :- 
 
-People with visual impairment have a difficult time going about places on their own. They always feel a
-need to be accompanied by a helper to reach their destination safely. Ascertain a solution to ease their
-lives by designing a system to be embedded into a walking stick such that it continuously scans the
-environment and provides feedback to the person. Try and replace a human helper with a designed
-system that is as reliable as an actual helper.
+  People with visual impairment have a difficult time going about places on their own. They always feel a
+  need to be accompanied by a helper to reach their destination safely. Ascertain a solution to ease their
+  lives by designing a system to be embedded into a walking stick such that it continuously scans the
+  environment and provides feedback to the person. Try and replace a human helper with a designed
+  system that is as reliable as an actual helper.
 
 Objective :
 
-We are going to make a Smart Walking Stick for the people with visual disability . This stick is far better
-than the traditional sticks that they use everyday . We selected Stick for developing a product because
-Stick is considered as the Third Eye for Blind People .
+  We are going to make a Smart Walking Stick for the people with visual disability . This stick is far better
+  than the traditional sticks that they use everyday . We selected Stick for developing a product because
+  Stick is considered as the Third Eye for Blind People .
 
 Novelty :
 
-The general Blind Sticks that are available in the market are capable of finding obstacles only when they
-touch the objects physically that may sometime result in accident . But the Smart Stick that we
-developed consists of the following advance features :-
+   The general Blind Sticks that are available in the market are capable of finding obstacles only when they
+   touch the objects physically that may sometime result in accident . But the Smart Stick that we
+   developed consists of the following advance features :-
 1. It is capable of finding obstacles that may be present in Front , Right and Left direction of the Blind
    Man without any physical touch with the object . Our product can detect object from the distance
    of 1 meter and alerts the Blind Man by Vibrating the Stick and Buzzer Sound . 
@@ -30,13 +30,13 @@ developed consists of the following advance features :-
    
 Target Community : 
    
-It will be very much helpful for blind people , the people with visual impairment , old people etc. This
-product would be considered as boon for Blind People and it will make them independent . 
+   It will be very much helpful for blind people , the people with visual impairment , old people etc. This
+   product would be considered as boon for Blind People and it will make them independent . 
 
 
 Technical Implementation :
 
-For developing the Smart Stick we have used the following Electronic components like :
+   For developing the Smart Stick we have used the following Electronic components like :
 1. Arduino Uno x 1
 2. Ultra Sonic Sensors(HC-SR04) x 3
 3. Water Sensor x 1
@@ -48,29 +48,28 @@ For developing the Smart Stick we have used the following Electronic components 
 9. Power Source
 
 Software Required :
+   Arduino IDE
+   Tinker Cad
 
-Arduino IDE
-Tinker Cad
+   When the person starts walking on the road with the help of smart stick the Ultra Sonic Sensors used in
+   the stick starts detecting any obstacles by transmitting and receiving ultrasonic sounds . If it detect
+   any object that is less than 1 meter from the stick it sends signal to the micro-controller and then the
+   Buzzer starts Beeping and Vibration Motor starts Vibrating the Stick . We have made the buzzer sound
+   different for obstacles from different directions like if the Right Sensor detects the obstacle then the
+   buzzer will starts beeping having long delays and the same mechanism used for other two Ultra Sonic
+   sensors also . Now we know that ultrasonic sensor is not capable of detecting watery surface or any
+   small watery pothole present on Road . To detect this we have connected a Water Detector at the end
+   tip of our Smart Stick . Whenever it detects any type of watery surface it informs the Blind Man by
+   starting the Buzzer by playing unique sound pattern . Many times we have noticed that stick falls from
+   the hand of Blind Person and it becomes difficult for them to find the stick . So ,to overcome this
+   problem we have connected an IR Sensor Detector on the stick and we give an IR Remote to the Blind
+   Man . Whenever he faces this type of situation he just have to press a button and then the Buzzer starts
+   beeping and the man can easily find the stick by listening the Buzzer Sound . We have also connected a
+   Red Led Light on the stick so that person coming from front side can know that a Blind Man is coming
+   and he become more cautious . 
 
-When the person starts walking on the road with the help of smart stick the Ultra Sonic Sensors used in
-the stick starts detecting any obstacles by transmitting and receiving ultrasonic sounds . If it detect
-any object that is less than 1 meter from the stick it sends signal to the micro-controller and then the
-Buzzer starts Beeping and Vibration Motor starts Vibrating the Stick . We have made the buzzer sound
-different for obstacles from different directions like if the Right Sensor detects the obstacle then the
-buzzer will starts beeping having long delays and the same mechanism used for other two Ultra Sonic
-sensors also . Now we know that ultrasonic sensor is not capable of detecting watery surface or any
-small watery pothole present on Road . To detect this we have connected a Water Detector at the end
-tip of our Smart Stick . Whenever it detects any type of watery surface it informs the Blind Man by
-starting the Buzzer by playing unique sound pattern . Many times we have noticed that stick falls from
-the hand of Blind Person and it becomes difficult for them to find the stick . So ,to overcome this
-problem we have connected an IR Sensor Detector on the stick and we give an IR Remote to the Blind
-Man . Whenever he faces this type of situation he just have to press a button and then the Buzzer starts
-beeping and the man can easily find the stick by listening the Buzzer Sound . We have also connected a
-Red Led Light on the stick so that person coming from front side can know that a Blind Man is coming
-and he become more cautious . 
-
-Approximately 950 INR is required , for developing a product that consists of the above features and
-specifications .
+   Approximately 950 INR is required , for developing a product that consists of the above features and
+   specifications .
 
 
 Outcome / Social Impact :
