@@ -66,7 +66,7 @@ void loop()
   
   if(distance1<100)
   {
-    tone(buzzer , 1500 , 1000);
+    tone(buzzer , 1500 , 800);
     digitalWrite(motor , HIGH);
     delay(500);
     digitalWrite(motor , LOW);
@@ -84,7 +84,7 @@ void loop()
   
   if(distance2<100)
   {
-    tone(buzzer , 2500 , 1000);
+    tone(buzzer , 2500 , 600);
     digitalWrite(motor , HIGH);
     delay(100);
     digitalWrite(motor , LOW);
@@ -103,7 +103,7 @@ void loop()
   
   if(distance3<100)
   {
-    tone(buzzer , 500 , 1000);
+    tone(buzzer , 500 , 500);
     digitalWrite(motor , HIGH);
     delay(100);
     digitalWrite(motor , LOW);
