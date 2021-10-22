@@ -70,7 +70,25 @@ void loop()
     digitalWrite(motor , LOW);
     delay(500);
   }
+
+
+  digitalWrite(triggpin3 , LOW);
+  delayMicroseconds(2);
+  digitalWrite(triggpin3 , HIGH);
+  delayMicroseconds(10);
+  digitalWrite(triggpin3 , LOW);
   
+  duration3 = pulseIn(echopin3 , HIGH);
+  distance3 = duration3 * 0.0345/2;
+  
+  if(distance3<100)
+  {
+    tone(buzzer , 500 , 1000);
+    digitalWrite(motor , HIGH);
+    delay(100);
+    digitalWrite(motor , LOW);
+    delay(100);
+  }
  
   
 }
