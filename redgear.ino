@@ -21,11 +21,13 @@ decode_results myresult;
 
 long duration1 , distance1 , duration2 , distance2 , duration3 , distance3 ;
 unsigned int ldr_data;
-const int ldr_value = 400;
+const int ldr_value = 400;   // Light Intensity
+
 void setup()
 {
   IR.enableIRIn();
   //Serial.begin(9600);
+  
   pinMode(echopin1 , INPUT);
   pinMode(echopin2 , INPUT);
   pinMode(echopin3 , INPUT);
@@ -35,10 +37,13 @@ void setup()
   {
   pinMode(i , OUTPUT);
   }
+  
 }
 
 void loop()
 {
+  
+  // Code for LDR 
    ldr_data = analogRead(ldr);
   if(ldr_data <= ldr_value)
   {
@@ -55,6 +60,7 @@ void loop()
     delay(500);
   }
   
+  // Code for First Ultra Sonic Sensor
   digitalWrite(triggpin1 , LOW);
   delayMicroseconds(2);
   digitalWrite(triggpin1 ,HIGH);
@@ -70,9 +76,10 @@ void loop()
     digitalWrite(motor , HIGH);
     delay(500);
     digitalWrite(motor , LOW);
-    delay(500);
+    delay(100);
   }
 
+  // Code for Second Ultra Sonic Sensor
   digitalWrite(triggpin2 , LOW);
   delayMicroseconds(2);
   digitalWrite(triggpin2 ,HIGH);
@@ -86,12 +93,12 @@ void loop()
   {
     tone(buzzer , 2500 , 600);
     digitalWrite(motor , HIGH);
-    delay(100);
+    delay(500);
     digitalWrite(motor , LOW);
     delay(100);
   }
 
-
+ // Code for Third Ultra Sonic Sensor 
   digitalWrite(triggpin3 , LOW);
   delayMicroseconds(2);
   digitalWrite(triggpin3 , HIGH);
@@ -105,11 +112,13 @@ void loop()
   {
     tone(buzzer , 500 , 500);
     digitalWrite(motor , HIGH);
-    delay(100);
+    delay(500);
     digitalWrite(motor , LOW);
     delay(100);
   }
   
+  
+  // Code to decode the Signal of IR Remote
  if(IR.decode(&myresult))
   {
    //Serial.println(myresult.value , HEX);
@@ -117,6 +126,8 @@ void loop()
  }
  // delay(100);
   
+  
+  // Code for IR Remote 
   if(myresult.value == 0xFD00FF)
  {
    digitalWrite(buzzer , HIGH);
